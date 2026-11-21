@@ -4,23 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
-    <title>The Autonomous Account · Results</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+    <title>AlgoPilot · The Autonomous Trader</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="results.js"></script>
 </head>
 <body>
-<main>
-    <header>
-        <h1>THE AUTONOMOUS ACCOUNT</h1>
-        <p>A real-money trading experiment run by software under fixed risk rules.</p>
-        <p class="started">Started <time datetime="2026-11-19">19 November 2026</time></p>
-    </header>
-    <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Results</a>
-        <a href="experiment.html">The experiment</a>
-        <a href="technical.html">Technical</a>
-    </nav>
+<header class="home-hero">
+    <h1>ALGOPILOT</h1>
+    <p class="hero-subtitle">The Autonomous Trader</p>
+    <p class="hero-tagline">Measure first. Modify second.</p>
+    <p class="started">Started <time datetime="2026-11-19">19 November 2026</time></p>
+</header>
+<nav class="site-nav home-nav" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Results</a>
+    <a href="experiment.html">The experiment</a>
+    <a href="technical.html">Technical</a>
+</nav>
+<main class="home-results">
     <p id="update" class="update" role="status">Loading published results…</p>
 
     <section class="metrics" aria-label="Performance">
