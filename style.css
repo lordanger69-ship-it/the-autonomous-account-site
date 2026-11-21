@@ -85,10 +85,19 @@ footer p + p { margin-top: .45rem; }
     opacity: .08;
     pointer-events: none;
 }
-.home-hero h1 {
+.hero-lockup {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: .2em;
     font-size: clamp(2rem, 10vw, 5rem);
     line-height: 1;
     letter-spacing: .075em;
+    white-space: nowrap;
+}
+.hero-lockup img {
+    width: auto;
+    height: 1cap;
 }
 .home-hero .hero-subtitle {
     margin-top: .7rem;
