@@ -89,7 +89,7 @@ footer p + p { margin-top: .45rem; }
     display: flex;
     align-items: center;
     justify-self: center;
-    gap: .2em;
+    gap: .04em;
     font-size: clamp(2rem, 10vw, 5rem);
     line-height: 1;
     letter-spacing: .075em;
