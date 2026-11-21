@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+    <title>Technical Methodology · The Autonomous Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <p class="site-title">THE AUTONOMOUS ACCOUNT</p>
+        <p>A real-money trading experiment run by software under fixed risk rules.</p>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Results</a>
+        <a href="experiment.html">The experiment</a>
+        <a href="technical.html" aria-current="page">Technical</a>
+    </nav>
+
+    <article class="reading">
+        <h1>TECHNICAL METHODOLOGY</h1>
+        <section>
+            <h2>Introduction</h2>
+            <p>The Autonomous Account is an experimental framework for evaluating autonomous systematic trading strategies using small amounts of real capital.</p>
+            <p>The objective is to give strategies meaningful samples under stable rules, while recording execution, risk, market conditions and outcomes for later analysis. A handful of profitable trades is too small a sample to optimise around.</p>
+        </section>
+
+        <section>
+            <h2>V1 strategy</h2>
+            <dl class="parameters">
+                <div><dt>Markets</dt><dd>BTC, ETH, SOL, NEAR</dd></div>
+                <div><dt>Signal</dt><dd>20-hour breakout</dd></div>
+                <div><dt>Execution timeframe</dt><dd>1 hour</dd></div>
+                <div><dt>Trend alignment</dt><dd>4-hour EMA24 / EMA50</dd></div>
+                <div><dt>Relative volume requirement</dt><dd>At least 1.20</dd></div>
+                <div><dt>Volatility</dt><dd>ATR14 on the 1-hour timeframe</dd></div>
+                <div><dt>Stop</dt><dd>2 × ATR</dd></div>
+                <div><dt>Target</dt><dd>2.5R</dd></div>
+            </dl>
+            <p>Trading fees and execution costs are included in evaluation.</p>
+        </section>
+
+        <section>
+            <h2>Risk architecture</h2>
+            <dl class="parameters">
+                <div><dt>Normal production risk per trade</dt><dd>0.75% of verified account equity</dd></div>
+                <div><dt>Absolute software ceiling</dt><dd>3%, a failsafe above normal position sizing</dd></div>
+                <div><dt>Maximum concurrent positions</dt><dd>3</dd></div>
+                <div><dt>Maximum gross portfolio leverage</dt><dd>3×</dd></div>
+            </dl>
+            <p>No averaging down. No widening stops. If the calculated position is too small to satisfy an exchange minimum, the system skips the trade.</p>
+            <p>Unknown or manually created exposure blocks new autonomous entries until the system can reconcile the account state.</p>
+        </section>
+
+        <section>
+            <h2>Safety and execution</h2>
+            <p>Strategy decisions and hard risk enforcement are separate. The trading system cannot control funding, withdrawals or transfers.</p>
+            <p>The system establishes and verifies exchange-side stop-loss and take-profit protection and keeps durable records of intended actions, exchange fills and reconciliation evidence.</p>
+            <p>If account state becomes uncertain, the system blocks new entries. A mark-to-market high-water-mark circuit breaker blocks new entries after a 30% equity drawdown while preserving management of existing positions.</p>
+            <p>There is deliberately no daily drawdown stop. The hypothesis is that an automated strategy does not suffer behavioural problems such as revenge trading or FOMO. Long-run evidence may support or reject that decision.</p>
+        </section>
+
+        <section>
+            <h2>Experimental method</h2>
+            <p>V1 should remain substantially frozen while an adequate live sample accumulates. Changing parameters after every losing trade would introduce hindsight and overfitting.</p>
+            <p>Analysis should eventually include:</p>
+            <ul class="research-list">
+                <li>Expectancy</li><li>Average R</li><li>Win rate</li><li>Payoff ratio</li>
+                <li>Drawdown</li><li>Volatility</li><li>Trading fees</li><li>Slippage</li>
+                <li>Market-specific results</li><li>Long versus short performance</li>
+                <li>Time-of-day effects</li><li>Performance under different market regimes</li>
+            </ul>
+            <p>Operational failures are also data. Reconciliation failures, exchange behaviour, rejected orders and protection issues matter because a profitable signal is of limited value if the surrounding execution system is unreliable.</p>
+        </section>
+
+        <section>
+            <h2>Multi-strategy roadmap</h2>
+            <p>The longer-term architecture is intended to support several isolated strategies simultaneously. Likely research systems include:</p>
+            <dl class="parameters">
+                <div><dt>V1</dt><dd>Breakout / trend</dd></div>
+                <div><dt>V2</dt><dd>US market-open volatility / fakeout research</dd></div>
+                <div><dt>V3</dt><dd>Mean reversion</dd></div>
+                <div><dt>V4</dt><dd>Shorter-term momentum</dd></div>
+            </dl>
+            <p>Each strategy should have versioned rules and an independent performance history. We want to determine whether different systems perform under different market conditions.</p>
+            <p>A future higher-level allocation system may only be considered after individual strategies have accumulated sufficient evidence.</p>
+        </section>
+
+        <section>
+            <h2>Public reporting</h2>
+            <p>The public website is separate from live trading infrastructure. It receives only a sanitised static dataset generated from confirmed production records.</p>
+            <p>The site has no signing capability, trading credentials, ability to submit orders, or access to current positions or live trading signals.</p>
+            <p>Public reporting may include completed trades, realised performance, periodic account-balance snapshots and historical performance charts.</p>
+            <p>Current positions, open orders, stop levels, take-profit levels, signals, wallet information and operational controls remain private.</p>
+        </section>
+
+        <section class="panel principle" aria-labelledby="principle-title">
+            <h2 id="principle-title">MEASURE FIRST. MODIFY SECOND.</h2>
+            <p>A strategy that loses several trades has not necessarily failed. A strategy that wins several trades has not necessarily succeeded.</p>
+            <p>The value of The Autonomous Account comes from accumulating enough controlled evidence to distinguish genuine behaviour from ordinary market variance.</p>
+        </section>
+    </article>
+
+    <footer><p>Experimental autonomous trading system using real capital. Historical results are not indicative of future performance.</p></footer>
+</main>
+</body>
+</html>

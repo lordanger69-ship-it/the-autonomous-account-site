@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+    <title>The Experiment · The Autonomous Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <header>
+        <p class="site-title">THE AUTONOMOUS ACCOUNT</p>
+        <p>A real-money trading experiment run by software under fixed risk rules.</p>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Results</a>
+        <a href="experiment.html" aria-current="page">The experiment</a>
+        <a href="technical.html">Technical</a>
+    </nav>
+
+    <article class="reading">
+        <h1>THE EXPERIMENT</h1>
+        <section>
+            <h2>What is The Autonomous Account?</h2>
+            <p>The Autonomous Account is a real-money experiment in automated trading.</p>
+            <p>We built a software system, gave it a small amount of real capital and a fixed set of risk rules, and then allowed it to find and execute trades without us choosing each trade manually.</p>
+            <p>The purpose is not to prove that AI can magically beat the market. It is to find out what actually happens when a trading system is given enough independence to make its own decisions, while still operating inside strict safety limits.</p>
+            <p>Every completed production trade is logged. Wins and losses are both included. The results shown on this site come from real trades using real money.</p>
+        </section>
+
+        <section>
+            <h2>What are we trying to learn?</h2>
+            <p>The interesting part is not whether the first few trades make money. Over time, we want enough data to understand when the system works, when it fails and why.</p>
+            <ul>
+                <li>Does it perform better in strong trends than sideways markets?</li>
+                <li>Does it favour certain assets?</li>
+                <li>Are there times of day when its signals are stronger?</li>
+                <li>How much performance disappears through fees and slippage?</li>
+                <li>How severe are losing streaks?</li>
+                <li>Are some strategies genuinely complementary to others?</li>
+            </ul>
+            <p>Those questions need evidence, not guesswork.</p>
+        </section>
+
+        <section>
+            <h2>Where this is going</h2>
+            <p>This is the first strategy. The longer-term plan is to operate several independently tested trading systems, each using a different approach to the market. Their trades, returns and failures can then be compared over meaningful samples.</p>
+            <p>Rather than constantly changing a strategy whenever it loses, each version will be allowed to collect enough data to judge it properly.</p>
+            <p>Successful ideas can then be refined. Weak ideas can be rejected. Different strategies may eventually be combined if the evidence suggests they perform well under different market conditions.</p>
+            <p>In other words, this is less a search for a magical trading bot and more an attempt to build a small autonomous trading laboratory.</p>
+        </section>
+
+        <section>
+            <h2>The rules matter</h2>
+            <p>The system does not have unlimited freedom. Its trading activity operates inside predetermined risk controls, including limits on risk per trade, concurrent positions and total exposure.</p>
+            <p>Stops and protective orders form part of the execution process. These controls exist independently of whether the trading strategy is currently winning or losing.</p>
+        </section>
+
+        <section>
+            <h2>Why publish the results?</h2>
+            <p>Because an experiment is more interesting when failure cannot quietly disappear.</p>
+            <p>The public record updates from confirmed completed production trades. Losing trades remain part of the record.</p>
+            <p>No trading signals or current positions are published here, and this project is not offering investment advice or a trading service.</p>
+            <p>It is simply an experiment.</p>
+            <ol>
+                <li>Build the system.</li>
+                <li>Give it real money.</li>
+                <li>Record what happens.</li>
+                <li>Learn from the evidence.</li>
+            </ol>
+        </section>
+    </article>
+
+    <footer><p>Experimental autonomous trading system using real capital. Historical results are not indicative of future performance.</p></footer>
+</main>
+</body>
+</html>

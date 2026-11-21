@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+    <title>The Autonomous Account · Results</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="results.js"></script>
+</head>
+<body>
+<main>
+    <header>
+        <h1>THE AUTONOMOUS ACCOUNT</h1>
+        <p>A real-money trading experiment run by software under fixed risk rules.</p>
+        <p class="started">Started <time datetime="2026-11-19">19 November 2026</time></p>
+    </header>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Results</a>
+        <a href="experiment.html">The experiment</a>
+        <a href="technical.html">Technical</a>
+    </nav>
+    <p id="update" class="update" role="status">Loading published results…</p>
+
+    <section class="metrics" aria-label="Performance">
+        <div class="metric primary headline"><h2>ACCOUNT CHANGE SINCE START</h2><strong id="change-pct">—</strong><span id="change">—</span></div>
+        <div class="metric primary"><h2>ACCOUNT BALANCE · LAST SNAPSHOT</h2><strong id="balance">—</strong><small id="balance-note">Published snapshot</small></div>
+        <div class="metric"><h2>Realised P/L</h2><strong id="realised">—</strong></div>
+        <div class="metric"><h2>Realised return</h2><strong id="return">—</strong></div>
+        <div class="metric"><h2>Closed trades</h2><strong id="count">—</strong></div>
+        <div class="metric"><h2>Record</h2><strong id="outcomes">—</strong></div>
+    </section>
+
+    <section class="panel" aria-labelledby="curve-title">
+        <h2 id="curve-title">REALISED ACCOUNT GROWTH</h2>
+        <p class="secondary">Starting capital plus net P/L from confirmed closed trades.</p>
+        <canvas id="curve" role="img" aria-label="Realised equity by closed trade"></canvas>
+        <p class="chart-axis"><span>Start</span><span id="chart-end">Closed trades</span></p>
+    </section>
+
+    <section class="panel" aria-labelledby="trades-title">
+        <h2 id="trades-title">Recent closed trades</h2>
+        <ul id="trades" class="trades"></ul>
+    </section>
+
+    <section class="panel overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">WHAT IS THIS?</h2>
+        <p>What happens if you give software real money, fixed trading rules and enough independence to make its own decisions?</p>
+        <p>The Autonomous Account is a live experiment designed to find out.</p>
+        <p>Every completed production trade is recorded — wins and losses included.</p>
+        <div class="overview-links">
+            <a href="experiment.html">Read the experiment <span aria-hidden="true">→</span></a>
+            <a href="technical.html">Technical methodology <span aria-hidden="true">→</span></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Experimental autonomous trading system using real capital. Historical results are not indicative of future performance.</p>
+        <p>Results update after confirmed closed trades and are not live market data. Realised results include entry and exit fees and exclude perpetual funding. Realised return uses the supervised starting capital.</p>
+    </footer>
+</main>
+</body>
+</html>
