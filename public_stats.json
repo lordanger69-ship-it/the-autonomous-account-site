@@ -1,9 +1,9 @@
 {
-  "account_balance": 123.214541,
-  "account_change": 6.772878,
-  "account_change_pct": 5.816541799132498,
-  "closed_trades": 4,
-  "losses": 0,
+  "account_balance": 119.77479,
+  "account_change": 3.333127,
+  "account_change_pct": 2.8624865998349747,
+  "closed_trades": 7,
+  "losses": 3,
   "realised_equity": [
     {
       "equity": 116.441663,
@@ -24,11 +24,53 @@
     {
       "equity": 122.587146,
       "trade_number": 4
+    },
+    {
+      "equity": 121.593822,
+      "trade_number": 5
+    },
+    {
+      "equity": 120.679431,
+      "trade_number": 6
+    },
+    {
+      "equity": 119.777951,
+      "trade_number": 7
     }
   ],
-  "realised_pnl": 6.145483,
-  "realised_return_pct": 5.277735512932343,
+  "realised_pnl": 3.336288,
+  "realised_return_pct": 2.865201263915305,
   "recent_trades": [
+    {
+      "closed_at": "2026-11-22T08:36:58.314Z",
+      "entry_price": 2.8107,
+      "exit_price": 2.937,
+      "market": "NEAR",
+      "opened_at": "2026-11-20T18:01:06.734Z",
+      "realised_pnl": -0.90148,
+      "side": "SHORT",
+      "trade_number": 7
+    },
+    {
+      "closed_at": "2026-11-21T13:39:27.306Z",
+      "entry_price": 68.62,
+      "exit_price": 70.79,
+      "market": "SOL",
+      "opened_at": "2026-11-20T16:06:29.007Z",
+      "realised_pnl": -0.914391,
+      "side": "SHORT",
+      "trade_number": 6
+    },
+    {
+      "closed_at": "2026-11-21T13:36:28.687Z",
+      "entry_price": 58345.0,
+      "exit_price": 60168.0,
+      "market": "BTC",
+      "opened_at": "2026-11-20T19:01:16.404Z",
+      "realised_pnl": -0.993324,
+      "side": "SHORT",
+      "trade_number": 5
+    },
     {
       "closed_at": "2026-11-20T18:46:59.104Z",
       "entry_price": 61617.0,
@@ -71,7 +113,7 @@
     }
   ],
   "starting_capital": 116.441663,
-  "updated_at": "2026-11-21T11:28:20.110Z",
-  "win_rate": 100.0,
+  "updated_at": "2026-11-23T17:58:46.732Z",
+  "win_rate": 57.142857142857146,
   "wins": 4
 }
