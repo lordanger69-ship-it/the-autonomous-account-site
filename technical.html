@@ -24,43 +24,42 @@
         <h1>TECHNICAL METHODOLOGY</h1>
         <section>
             <h2>Introduction</h2>
-            <p>The Autonomous Account is an experimental framework for evaluating autonomous systematic trading strategies using small amounts of real capital.</p>
-            <p>The objective is to give strategies meaningful samples under stable rules, while recording execution, risk, market conditions and outcomes for later analysis. A handful of profitable trades is too small a sample to optimise around.</p>
+        <p>AlgoPilot is an experimental autonomous trading system designed to investigate whether disciplined, software-driven trading can generate sustainable returns in real market conditions.</p>
+        <p>By replacing emotional decisions with systematic analysis, the project seeks to identify repeatable market opportunities while maintaining controlled risk.</p>
+
         </section>
 
         <section>
-            <h2>V1 strategy</h2>
-            <dl class="parameters">
-                <div><dt>Markets</dt><dd>BTC, ETH, SOL, NEAR</dd></div>
-                <div><dt>Signal</dt><dd>20-hour breakout</dd></div>
-                <div><dt>Execution timeframe</dt><dd>1 hour</dd></div>
-                <div><dt>Trend alignment</dt><dd>4-hour EMA24 / EMA50</dd></div>
-                <div><dt>Relative volume requirement</dt><dd>At least 1.20</dd></div>
-                <div><dt>Volatility</dt><dd>ATR14 on the 1-hour timeframe</dd></div>
-                <div><dt>Stop</dt><dd>2 × ATR</dd></div>
-                <div><dt>Target</dt><dd>2.5R</dd></div>
-            </dl>
-            <p>Trading fees and execution costs are included in evaluation.</p>
+            <h2>Trading intelligence</h2>
+        <p>AlgoPilot analyses cryptocurrency markets continuously, evaluating price behaviour, momentum, volatility, volume and broader market conditions.</p>
+        <p>Proprietary algorithms identify potential trading opportunities and evaluate them against predefined entry, exit and risk criteria.</p>
+        <p>Trading decisions are made systematically, without discretionary human intervention. Trading fees and execution costs are included in performance evaluation.</p>
+        <p>Specific strategy parameters and signal-generation methods remain confidential.</p>
+
         </section>
 
         <section>
             <h2>Risk architecture</h2>
-            <dl class="parameters">
-                <div><dt>Normal production risk per trade</dt><dd>0.75% of verified account equity</dd></div>
-                <div><dt>Absolute software ceiling</dt><dd>3%, a failsafe above normal position sizing</dd></div>
-                <div><dt>Maximum concurrent positions</dt><dd>3</dd></div>
-                <div><dt>Maximum gross portfolio leverage</dt><dd>3×</dd></div>
-            </dl>
-            <p>No averaging down. No widening stops. If the calculated position is too small to satisfy an exchange minimum, the system skips the trade.</p>
-            <p>Unknown or manually created exposure blocks new autonomous entries until the system can reconcile the account state.</p>
+        <p>Capital preservation is a central design objective. Every proposed trade must satisfy predefined risk constraints before execution.</p>
+        <ul class="research-list">
+            <li>Dynamic position sizing</li>
+            <li>Portfolio exposure limits</li>
+            <li>Controlled leverage</li>
+            <li>Protective stop-loss orders</li>
+            <li>Account-level circuit breakers</li>
+            <li>Independent risk enforcement</li>
+        </ul>
+        <p>The system is prohibited from averaging down or widening protective stops. Unrecognised account exposure prevents new autonomous entries.</p>
+
         </section>
 
         <section>
             <h2>Safety and execution</h2>
-            <p>Strategy decisions and hard risk enforcement are separate. The trading system cannot control funding, withdrawals or transfers.</p>
-            <p>The system establishes and verifies exchange-side stop-loss and take-profit protection and keeps durable records of intended actions, exchange fills and reconciliation evidence.</p>
-            <p>If account state becomes uncertain, the system blocks new entries. A mark-to-market high-water-mark circuit breaker blocks new entries after a 30% equity drawdown while preserving management of existing positions.</p>
-            <p>There is deliberately no daily drawdown stop. The hypothesis is that an automated strategy does not suffer behavioural problems such as revenge trading or FOMO. Long-run evidence may support or reject that decision.</p>
+        <p>Strategy decisions and risk enforcement operate independently. AlgoPilot cannot control account funding, withdrawals or external transfers. These remain under exclusive human control.</p>
+        <p>The system establishes and verifies exchange-side trade protection, monitors execution and maintains durable records of trading activity.</p>
+        <p>Automated safeguards restrict new trading activity when account integrity, operational reliability or predefined risk conditions are compromised.</p>
+        <p>Human oversight remains an integral part of the architecture.</p>
+
         </section>
 
         <section>
@@ -78,15 +77,11 @@
 
         <section>
             <h2>Multi-strategy roadmap</h2>
-            <p>The longer-term architecture is intended to support several isolated strategies simultaneously. Likely research systems include:</p>
-            <dl class="parameters">
-                <div><dt>V1</dt><dd>Breakout / trend</dd></div>
-                <div><dt>V2</dt><dd>US market-open volatility / fakeout research</dd></div>
-                <div><dt>V3</dt><dd>Mean reversion</dd></div>
-                <div><dt>V4</dt><dd>Shorter-term momentum</dd></div>
-            </dl>
-            <p>Each strategy should have versioned rules and an independent performance history. We want to determine whether different systems perform under different market conditions.</p>
-            <p>A future higher-level allocation system may only be considered after individual strategies have accumulated sufficient evidence.</p>
+        <p>The longer-term objective is to develop an ecosystem of independent trading strategies capable of operating across different market conditions.</p>
+        <p>Candidate strategies undergo historical backtesting, robustness testing and out-of-sample evaluation before being considered for live deployment.</p>
+        <p>Each strategy will maintain independently versioned rules and performance records.</p>
+        <p>Ultimately, the project aims to investigate intelligent capital allocation between complementary autonomous trading systems.</p>
+
         </section>
 
         <section>
@@ -98,7 +93,7 @@
         </section>
 
         <section class="panel principle" aria-labelledby="principle-title">
-            <h2 id="principle-title">MEASURE FIRST. MODIFY SECOND.</h2>
+            <h2 id="principle-title">LESS EMOTION. MORE EQUATION.</h2>
             <p>A strategy that loses several trades has not necessarily failed. A strategy that wins several trades has not necessarily succeeded.</p>
             <p>The value of The Autonomous Account comes from accumulating enough controlled evidence to distinguish genuine behaviour from ordinary market variance.</p>
         </section>
