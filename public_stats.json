@@ -1,9 +1,9 @@
 {
-  "account_balance": 119.77479,
-  "account_change": 3.333127,
-  "account_change_pct": 2.8624865998349747,
-  "closed_trades": 7,
-  "losses": 3,
+  "account_balance": 119.205957,
+  "account_change": 2.764294,
+  "account_change_pct": 2.3739733088490844,
+  "closed_trades": 9,
+  "losses": 4,
   "realised_equity": [
     {
       "equity": 116.441663,
@@ -36,11 +36,39 @@
     {
       "equity": 119.777951,
       "trade_number": 7
+    },
+    {
+      "equity": 120.113152,
+      "trade_number": 8
+    },
+    {
+      "equity": 119.208036,
+      "trade_number": 9
     }
   ],
-  "realised_pnl": 3.336288,
-  "realised_return_pct": 2.865201263915305,
+  "realised_pnl": 2.766373,
+  "realised_return_pct": 2.3757587522603485,
   "recent_trades": [
+    {
+      "closed_at": "2026-11-25T18:17:03.054Z",
+      "entry_price": 58943.0,
+      "exit_price": 60052.0,
+      "market": "BTC",
+      "opened_at": "2026-11-25T08:29:29.187Z",
+      "realised_pnl": -0.905116,
+      "side": "SHORT",
+      "trade_number": 9
+    },
+    {
+      "closed_at": "2026-11-25T15:39:29.897Z",
+      "entry_price": 2.7725,
+      "exit_price": 2.7366,
+      "market": "NEAR",
+      "opened_at": "2026-11-25T14:04:07.775Z",
+      "realised_pnl": 0.335201,
+      "side": "SHORT",
+      "trade_number": 8
+    },
     {
       "closed_at": "2026-11-22T08:36:58.314Z",
       "entry_price": 2.8107,
@@ -113,7 +141,7 @@
     }
   ],
   "starting_capital": 116.441663,
-  "updated_at": "2026-11-23T17:58:46.732Z",
-  "win_rate": 57.142857142857146,
-  "wins": 4
+  "updated_at": "2026-11-26T09:36:56.418Z",
+  "win_rate": 55.55555555555556,
+  "wins": 5
 }
